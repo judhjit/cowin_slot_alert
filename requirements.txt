@@ -1,0 +1,6 @@
+pip3 install bs4
+pip3 install selenium
+pip3 intall subprocess
+pip3 install playsound
+pip3 install -U PyObjC
+
