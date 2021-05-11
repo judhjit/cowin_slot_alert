@@ -1,6 +1,5 @@
-pip3 install bs4
-pip3 install selenium
-pip3 intall subprocess
-pip3 install playsound
-pip3 install -U PyObjC
+beautifulsoup4==4.8.0
+selenium==3.141.0
+playsound==1.2.2
+
 

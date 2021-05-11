@@ -78,3 +78,4 @@ Exiting due to channel error.
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1620717486718	geckodriver	INFO	Listening on 127.0.0.1:49820
