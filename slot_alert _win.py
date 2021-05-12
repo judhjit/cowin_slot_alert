@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import subprocess
 import time
 from playsound import playsound
 import ctypes 
@@ -43,29 +42,27 @@ options = Options()
 base_url = 'https://www.cowin.gov.in/home'
     
 #invoke the webdriver - PLEASE ADD THE PATH HERE
-driver = webdriver.Chrome(executable_path = r'C:\Users\e42303\Downloads\chromedriver_win32\chromedriver.exe',
+driver = webdriver.Chrome(executable_path = r'<YOUR PATH HERE>/cowin_slot_alert/resources/firefox-win/geckodriver.exe',
                           options = options)
 driver.get(base_url)
 
 osiButton = driver.find_element_by_css_selector('.custom-checkbox label div.status-switch')
-
 osiButton.click()
 
 #Click State Button
 state_btn = driver.find_element_by_css_selector('div.ng-tns-c64-1:nth-child(2) > div:nth-child(1)')
 state_btn.click()
 
-#select State KARNATAKA
+#select State KARNATAKA (option 16)
 driver.execute_script("click_event = new CustomEvent('click');" + "btn_element = document.querySelector('#mat-option-16');" + "btn_element.dispatchEvent(click_event);")
-
 time.sleep(1)
 
 
-#search district button and click
+#click district button
 dis_btn = driver.find_element_by_css_selector('div.ng-tns-c64-3:nth-child(2) > div:nth-child(1)')
 dis_btn.click()
 time.sleep(1)
-#select District BENGALURU URBAN
+#select District BENGALURU URBAN (Option 39)
 driver.execute_script("click_event = new CustomEvent('click');" + "btn_element = document.querySelector('#mat-option-39');" + "btn_element.dispatchEvent(click_event);")
 
 while True:
